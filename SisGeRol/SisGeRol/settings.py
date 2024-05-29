@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,11 +87,7 @@ WSGI_APPLICATION = 'SisGeRol.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'nombre_de_tu_base_de_datos', # Puedes cambiar esto según tu preferencia
-        'USER': '', # Deja esto en blanco para SQLite
-        'PASSWORD': '', # Deja esto en blanco para SQLite
-        'HOST': '', # Deja esto en blanco para SQLite
-        'PORT': '', # Deja esto en blanco para SQLite
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
