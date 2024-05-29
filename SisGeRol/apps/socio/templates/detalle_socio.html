@@ -62,7 +62,7 @@
                     <ul class="info-list">
                         {% for mensualidad in socio.mensualidades.all %}
                             <li>
-                                Mesa: {{ mensualidad.mesa.nombre }} - Mes: {{ mensualidad.mes }} - Costo pagado: {{ mensualidad.costo_a_pagar }}
+                                Mesa: {{ mensualidad.mesa.nombre }} - Mes: {{ mensualidad.mes }} - Costo a pagar: {{ mensualidad.costo_a_pagar }}
                             </li>
                         {% endfor %}
                     </ul>
